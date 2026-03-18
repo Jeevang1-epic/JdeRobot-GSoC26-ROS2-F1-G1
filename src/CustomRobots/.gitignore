@@ -1,0 +1,15 @@
+.idea/
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode
+
+# Tests
+build
+install
+test/__pycache__/
+
+# Logs
+**log**
+
