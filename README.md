@@ -18,39 +18,39 @@ Where $\Phi$ is the neural network parameterized by $\theta$.
 - **dataset/**: Primary training samples containing expert driving trajectories.
 - **dataset_brittle/**: Edge-case dataset for track-limit recovery training.
 - **models/**: Pre-trained weights and performance telemetry.
-  ## 📁 Repository Structure
+## 📁 Repository Structure
 
 
-jderobot_gsoc26/
-├── dataset/                        # Primary expert driving dataset (Images + CSV)
-├── dataset_brittle/                # Edge-case recovery dataset
-├── src/
-│   ├── visual_control_module/      # Main ROS 2 Intelligence Package
-│   │   ├── config/                 # Network & PID hyperparameters
-│   │   │   └── hyperparams.yaml
-│   │   ├── launch/                 # ROS 2 Launch files for Gazebo integration
-│   │   │   └── visual_control.launch.py
-│   │   ├── models/                 # ❗ TRAINING OUTPUTS & WEIGHTS
-│   │   │   ├── robust_model.pth    # Optimized PyTorch weights (177MB)
-│   │   │   ├── model_brittle.pth   # Recovery-trained weights
-│   │   │   ├── training_loss.png   # Convergence visualization
-│   │   │   └── model_comparison.png 
-│   │   ├── resource/               # ROS 2 index files
-│   │   ├── vision_core/            # ❗ PRIMARY SCRIPT ENGINE
-│   │   │   ├── __init__.py
-│   │   │   ├── data_recorder.py    # Telemetry acquisition script
-│   │   │   ├── network.py          # CNN Architecture definition (PyTorch)
-│   │   │   ├── train.py            # Model training pipeline
-│   │   │   ├── visual_node.py      # Core Inference Node (Standard)
-│   │   │   ├── visual_node_v2.py   # Advanced Inference Node (Optimized)
-│   │   │   └── visual_test_cam.py  # Diagnostic camera utility
-│   │   ├── package.xml             # ROS 2 dependencies
-│   │   ├── setup.cfg               # Package configuration
-│   │   └── setup.py                # Installation script
-│   └── CustomRobots/               # JdeRobot 3D environments & assets
-├── .gitattributes                  # LFS configuration for .pth files
-├── .gitignore                      # Workspace exclusion rules
-└── README.md                       # Technical Documentation
+    jderobot_gsoc26/
+    ├── dataset/                        # Primary expert driving dataset (Images + CSV)
+    ├── dataset_brittle/                # Edge-case recovery dataset
+    ├── src/
+    │   ├── visual_control_module/      # Main ROS 2 Intelligence Package
+    │   │   ├── config/                 # Network & PID hyperparameters
+    │   │   │   └── hyperparams.yaml
+    │   │   ├── launch/                 # ROS 2 Launch files for Gazebo integration
+    │   │   │   └── visual_control.launch.py
+    │   │   ├── models/                 # ❗ TRAINING OUTPUTS & WEIGHTS
+    │   │   │   ├── robust_model.pth    # Optimized PyTorch weights (177MB)
+    │   │   │   ├── model_brittle.pth   # Recovery-trained weights
+    │   │   │   ├── training_loss.png   # Convergence visualization
+    │   │   │   └── model_comparison.png 
+    │   │   ├── resource/               # ROS 2 index files
+    │   │   ├── vision_core/            # ❗ PRIMARY SCRIPT ENGINE
+    │   │   │   ├── __init__.py
+    │   │   │   ├── data_recorder.py    # Telemetry acquisition script
+    │   │   │   ├── network.py          # CNN Architecture definition (PyTorch)
+    │   │   │   ├── train.py            # Model training pipeline
+    │   │   │   ├── visual_node.py      # Core Inference Node (Standard)
+    │   │   │   ├── visual_node_v2.py   # Advanced Inference Node (Optimized)
+    │   │   │   └── visual_test_cam.py  # Diagnostic camera utility
+    │   │   ├── package.xml             # ROS 2 dependencies
+    │   │   ├── setup.cfg               # Package configuration
+    │   │   └── setup.py                # Installation script
+    │   └── CustomRobots/               # JdeRobot 3D environments & assets
+    ├── .gitattributes                  # LFS configuration for .pth files
+    ├── .gitignore                      # Workspace exclusion rules
+    └── README.md                       # Technical Documentation
 
 ## Methodology
 
