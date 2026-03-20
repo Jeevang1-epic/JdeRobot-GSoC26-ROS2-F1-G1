@@ -91,4 +91,3 @@ Ensure the ROS 2 workspace environment variables are properly initialized.
    `python3 src/visual_control_module/vision_core/visual_node.py`
 
 ---
-*Submitted for the JdeRobot GSoC 2026 Makers Conclave.*
